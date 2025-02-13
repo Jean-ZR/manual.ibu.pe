@@ -39,6 +39,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
           includeCurrentVersion: false,
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           // Please change this to your repo.
@@ -46,21 +47,7 @@ const config: Config = {
           //editUrl:
           //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -70,6 +57,8 @@ const config: Config = {
 
   plugins: [
     'plugin-image-zoom',
+
+    require.resolve('docusaurus-lunr-search'),
 
     [
       'docusaurus-plugin-openapi-docs',
@@ -181,19 +170,13 @@ const config: Config = {
   themes: [
     // ... Your other themes.
     'docusaurus-theme-openapi-docs',
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
-      }),
-    ],
+    //[
+    //  require.resolve("@easyops-cn/docusaurus-search-local"),
+    //  /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+    //  ({
+    //    hashed: true,
+    //  }),
+    //],
   ],
 
   themeConfig: {
@@ -206,12 +189,12 @@ const config: Config = {
           src: 'img/fastura.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentacion',
-        },
+        //{
+        //  type: 'docSidebar',
+        //  sidebarId: 'tutorialSidebar',
+        //  position: 'left',
+        //  label: 'Documentacion',
+        //},
         {type: 'docsVersionDropdown', position: 'right'},
         //{
         //  href: 'https://github.com/facebook/docusaurus',
