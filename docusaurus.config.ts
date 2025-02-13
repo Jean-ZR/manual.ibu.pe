@@ -15,12 +15,12 @@ const config: Config = {
   url: 'https://Jean-ZR.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/manual.ibu.pe/',
+  baseUrl: '/manual.uio.la/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Jean-ZR',
-  projectName: 'manual.ibu.pe',
+  projectName: 'manual.uio.la',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
